@@ -7,8 +7,8 @@ public class Clase_6 {
         /*Llamo a la funcion en una variable para poder imprimir el resultado.
         en los ejercicios anteriores directamente ponia la funcion para que
         devuelva un String, pero me di cuenta que tambien lo podia hacer asi.
-        y que ademas puedo usarla en otros lados que si lo dejo solo string no
-        me servia*/
+        y que ademas puedo usarla en otros lados */
+
         int duracionJornada = duracionJornadaCompleta(4);
         System.out.println("La duración total de jornada es " + duracionJornada + " minutos.");
 
