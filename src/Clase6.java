@@ -1,4 +1,4 @@
-public class Clase_6 {
+public class Clase6 {
 
 
     public static void main(String[] args) {
