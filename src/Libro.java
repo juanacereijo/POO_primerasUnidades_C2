@@ -9,7 +9,8 @@ public class Libro {
     private int stockDisponible;
     private final double PRECIO_COSTO; //No se modifica
     private double precioVenta;
-
+    //Atributo estatico, lo inicio con un valor.
+    private static int stockPromo = 10;
 
     //Constructor
 
@@ -113,6 +114,21 @@ public class Libro {
         System.out.println("• Precio de Venta Lista: $" + this.getPrecioVenta()); // Usamos el getter por si avisa lo del sector 'c'
         System.out.println("*---------------------------------------------*");
     }
+    //Métodos estáticos
+    public static int getStockPromo(){
+        return stockPromo;
+    }
+
+    public static void setStockPromo(int valor){
+        if(valor >=0){
+            stockPromo = valor;
+            System.out.println("Se ha acutalizado correctamente el stock mínimo de promoción a: " + valor);
+        }
+        else {
+            System.out.println("Error: El número ingresado es invalido para realizar la operación.");
+        }
+    }
+
 
 }
 

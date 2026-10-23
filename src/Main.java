@@ -11,8 +11,6 @@ public static void main(String[] args) {
         libro1.mostrarDatos();
         libro2.mostrarDatos();
 
-
-
         // Pruebo los métodos
 
         System.out.println("¿Hay disponibilidad?: " + libro1.hayDisponibilidad());
@@ -48,4 +46,21 @@ public static void main(String[] args) {
         System.out.println("Precio Final $" + libro1.calcularPrecioFinalVenta());
 
 
-    }
+        // Consulto desde los títulos de los libros cuál es el stock que activa la promoción
+        // Como es estático, se puede invocar desde la instancia  o desde la clase
+        System.out.println("Stock de promoción inicial (consultado desde libro1): " + libro1.getStockPromo());
+        System.out.println("Nuevo stock de promoción (verificado desde la clase Libro): " + Libro.getStockPromo());
+
+        //Actualizo el StockPromo a 20
+        // Se lo invoca desde la clase
+        Libro.setStockPromo(20);
+
+        //Consulto nuevamente el stock de promocion ya modificado.
+        System.out.println("Nuevo stock de promoción (verificado desde libro2): " + libro2.getStockPromo());
+        System.out.println("Nuevo stock de promoción (verificado desde la clase Libro): " + Libro.getStockPromo());
+
+}
+
+
+
+
