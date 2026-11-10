@@ -39,6 +39,23 @@ public class Main {
         System.out.println("¿El perro original es igual al clon? " + perro.equals(perroClon));
         System.out.println("HashCode Perro: " + perro.hashCode());
         System.out.println("HashCode Clon: " + perroClon.hashCode());
+
+        //Creo un dueño
+        Dueño dueño = new Dueño("Victorino");
+
+        //Instancio los nuevos animales
+        Jabali jabali = new Jabali("J01","Pumba",5, 85.0);
+        Vivora vivora = new Vivora("V01", "Yuyu",2,1.0);
+
+        jabali.hacerSonido();
+        vivora.hacerSonido();
+
+        // Pruebo domesticar un animal
+        dueño.adiestrar(perro, "Alimento de primera calidad", 0.5);
+        dueño.adiestrar(gato, "Atún Premium", 0.15);
+        dueño.adiestrar(caballo, "Alfalfa", 5.0);
+
+
     }
 }
 

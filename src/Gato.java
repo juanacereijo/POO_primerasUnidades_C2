@@ -1,4 +1,4 @@
-public class Gato extends Animal {
+public class Gato extends Animal implements Domesticable {
     //Declaro los atributos especificos de la clase hija
     private int contPresa;
 
@@ -25,5 +25,9 @@ public class Gato extends Animal {
     public String toString() {
         // Llama al toString de Animal y le concatena el atributo del Gato
         return super.toString() + " Gato {Contador Presa= " + contPresa + "}";
+    }
+    @Override
+    public void domesticar(String tipoAlimento, double cantidad){
+        System.out.println(getNombre() + " maulla más fuerte para que le den de comer más de " + cantidad + "kg de " + tipoAlimento);
     }
 }

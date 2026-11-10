@@ -1,4 +1,4 @@
-public class Caballo extends Animal {
+public class Caballo extends Animal implements Domesticable {
     //Declaro los atributos especificos de la clase hija
     private String raza;
 
@@ -25,5 +25,10 @@ public class Caballo extends Animal {
     public String toString() {
         // Llama al toString de Animal y le concatena el atributo del Caballo
         return super.toString() + " Caballo {Raza= " + raza + "}";
+    }
+
+    @Override
+    public void domesticar(String tipoAlimento, double cantidad){
+        System.out.println(getNombre() + " mueve la cola  y la cabeza de felicdad  al comer " + cantidad + "kg de " + tipoAlimento);
     }
 }
